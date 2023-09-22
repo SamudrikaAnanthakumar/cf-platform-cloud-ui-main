@@ -1,0 +1,119 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+/* For use in src/lib/core/theming/_palette.scss */
+$md-mcgpalette0: (
+    50 : #f2f8ef,
+    100 : #dfedd8,
+    200 : #c9e2be,
+    300 : #b3d6a4,
+    400 : #a3cd91,
+    500 : #93c47d,
+    600 : #8bbe75,
+    700 : #80b66a,
+    800 : #76af60,
+    900 : #64a24d,
+    A100 : #ffffff,
+    A200 : #daffcd,
+    A400 : #b4ff9a,
+    A700 : #a1ff80,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+/* For use in src/lib/core/theming/_palette.scss */
+$md-mcgpalette1: (
+    50 : #fffcf3,
+    100 : #fff7e0,
+    200 : #fff2cc,
+    300 : #ffedb8,
+    400 : #ffe9a8,
+    500 : #ffe599,
+    600 : #ffe291,
+    700 : #ffde86,
+    800 : #ffda7c,
+    900 : #ffd36b,
+    A100 : #ffffff,
+    A200 : #ffffff,
+    A400 : #ffffff,
+    A700 : #fffbf3,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$cf-platform-cloud-primary: mat.define-palette($md-mcgpalette0);
+$cf-platform-cloud-accent: mat.define-palette($md-mcgpalette1);
+
+// The warn palette is optional (defaults to red).
+$cf-platform-cloud-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+
+$cf-platform-cloud-typography: mat.define-typography-config(
+  $font-family: '"Open Sans", sans-serif');
+  
+@include mat.typography-hierarchy($cf-platform-cloud-typography);
+
+$cf-platform-cloud-theme: mat.define-light-theme((
+  color: (
+    primary: $cf-platform-cloud-primary,
+    accent: $cf-platform-cloud-accent,
+    warn: $cf-platform-cloud-warn,
+  ),
+  typography: $cf-platform-cloud-typography
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($cf-platform-cloud-theme);
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; background-color: transparent; font-family: Open Sans, sans-serif; font-size: 14px; color:#252a2e }
+
+@import url(app/shared/styles/others/pf-scrollbar.scss);
+@import url(app/shared/styles/others/pf-common.scss);
+@import url(app/shared/styles/components/pf-modus-button.scss);
+@import 'app/shared/styles/others/pf-variables.scss';

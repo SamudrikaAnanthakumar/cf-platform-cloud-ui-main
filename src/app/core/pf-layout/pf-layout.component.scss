@@ -1,0 +1,19 @@
+.app-drawer-container {
+    height: 100%;
+    background-color: transparent;
+}
+
+.app-drawer {
+    width: 250px;
+    box-shadow: 0 0 4px var(--pf-shadow-color);
+}
+
+.content-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.app-router-content {
+    padding: 1.5rem !important;
+}

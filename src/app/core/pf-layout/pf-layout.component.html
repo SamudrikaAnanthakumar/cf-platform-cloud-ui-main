@@ -1,0 +1,16 @@
+<div class="content-container">
+
+    <core-pf-header [sideNav]="sideNav"></core-pf-header>
+    <mat-drawer-container class="app-drawer-container" [hasBackdrop]="false" autosize="true">
+        <mat-drawer #sideNav mode="side" class="app-drawer" opened>
+            <core-pf-side-menu [sideNav]="sideNav"></core-pf-side-menu>
+        </mat-drawer>
+        <mat-drawer-content>
+            <div class="app-router-content">
+                <router-outlet></router-outlet>
+            </div>
+        </mat-drawer-content>
+    </mat-drawer-container>
+    <core-pf-footer></core-pf-footer>
+
+</div>

@@ -1,0 +1,9 @@
+.footer-comp-links {
+    height: 30px;
+    padding-top: 10px;
+    font-size: 13px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border-top: 1px solid var(--pf-border-color);
+}

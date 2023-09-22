@@ -1,0 +1,57 @@
+.btn-primary {
+    color: #fff !important;
+    fill: #fff;
+    background-color: #0063a3 !important;
+    border-color: #0063a3 !important;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #0082d6 !important;
+    border-color: #0082d6 !important;
+}
+
+.btn-outline-primary {
+    color: #0063a3 !important;
+    fill: #0063a3 !important;
+    border-color: #0063a3 !important;
+}
+
+.btn-outline-primary:hover {
+    color: #0082d6;
+    background-color: rgba(0,99,163,.15);
+    border-color: #0082d6;
+}
+
+.btn-outline-dark {
+    color: #252a2e !important;
+    fill: #252a2e;
+    border-color: #252a2e !important;
+}
+
+.btn-outline-dark:hover {
+    color: #354551;
+    background-color: rgba(33,42,50,.15);
+    border-color: #354551;
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 600;
+    color: #252a2e;
+    font-family: Open Sans, sans-serif;
+    cursor: pointer;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 0.1875rem 1rem;
+    font-size: .875rem;
+    line-height: 1.75;
+    border-radius: 0.125rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
